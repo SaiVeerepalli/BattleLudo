@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101827">
+  <title>Battle Ludo — V1</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">BATTLE LUDO</div>
+        <h1>Frontline Ludo</h1>
+      </div>
+      <button id="newGameBtn" class="secondary">New Game</button>
+    </header>
+
+    <section class="status-card">
+      <div>
+        <span class="label">TURN</span>
+        <strong id="turnLabel">Red Command</strong>
+      </div>
+      <div>
+        <span class="label">DICE</span>
+        <strong id="diceValue">—</strong>
+      </div>
+      <div>
+        <span class="label">MODE</span>
+        <strong>Solo</strong>
+      </div>
+    </section>
+
+    <section class="game-layout">
+      <div class="board-wrap">
+        <div id="board" class="board" aria-label="Battle Ludo board"></div>
+        <div id="message" class="message">Roll the dice to begin.</div>
+      </div>
+
+      <aside class="controls">
+        <button id="rollBtn" class="roll">ROLL DICE</button>
+        <div class="army-card">
+          <div class="army-title"><span class="dot red"></span> Red Command</div>
+          <div class="pieces" id="redPieces"></div>
+        </div>
+        <div class="army-card">
+          <div class="army-title"><span class="dot blue"></span> Blue Command</div>
+          <div class="pieces" id="bluePieces"></div>
+        </div>
+        <div class="army-card">
+          <div class="army-title"><span class="dot green"></span> Green Command</div>
+          <div class="pieces" id="greenPieces"></div>
+        </div>
+        <div class="army-card">
+          <div class="army-title"><span class="dot yellow"></span> Yellow Command</div>
+          <div class="pieces" id="yellowPieces"></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="rules">
+      <h2>Battle Rules</h2>
+      <ul>
+        <li>Roll a 6 to deploy a soldier from the barracks.</li>
+        <li>Move a deployed soldier by the exact dice value.</li>
+        <li>Land on an enemy to send that soldier back to its barracks.</li>
+        <li>Safe squares cannot be captured.</li>
+        <li>Bring all four soldiers to HQ first to win.</li>
+      </ul>
+    </section>
+  </main>
+  <script src="js/game.js"></script>
+</body>
+</html>
